@@ -79,3 +79,21 @@ h4{
     0% { left: 50%; }
   100% { left: 100%; }
   }
+
+
+  .heart {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    font-size: 20px;
+    animation: fly 4s linear infinite;
+ 
+  }
+  @keyframes fly {
+    0% {
+      transform: translateY(100vh);
+    }
+    100% {
+      transform: translateY(-100vh) ;
+    }
+  }

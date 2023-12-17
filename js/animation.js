@@ -166,3 +166,27 @@ function createDiv(height, width) {
   div.style.backgroundColor="transparent";
   return (div);
 }
+var indexHeart = 0;
+function createHeart() {
+  indexHeart++;
+  const heart = document.createElement('div');
+  heart.classList.add('heart');
+  heart.innerHTML = "♥";
+  const startX = Math.random() * window.innerWidth;
+  const endX = Math.random() * window.innerWidth;
+  const duration = Math.random() * 2 + 2; // 2 to 4 seconds
+
+  heart.style.left = `${startX}px`;
+  heart.style.color=colours[indexHeart%colours.length];
+  document.body.appendChild(heart);
+
+  setTimeout(() => {
+    heart.style.transform = `translate(${endX - startX}px, -100vh) rotate(45deg)`;
+  }, 0);
+
+  setTimeout(() => {
+    heart.remove();
+  }, duration * 1000);
+}
+
+setInterval(createHeart, 200);
