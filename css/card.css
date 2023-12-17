@@ -71,8 +71,8 @@ h4{
 }
   
   @keyframes zoom-in-zoom-out {
-    0% { left: 0; }
-  100% { left:50%; }
+    0% { left: -500; }
+  100% { left:0; }
   }
 
   @keyframes zoom-out-zoom-in {
